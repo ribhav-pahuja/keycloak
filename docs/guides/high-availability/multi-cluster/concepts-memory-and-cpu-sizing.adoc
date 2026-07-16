@@ -60,7 +60,7 @@ The following setup was used to retrieve the settings above to run tests of abou
 * All authentication sessions in distributed caches as per default, with two owners per entries, allowing one failing Pod without losing data.
 * All user and client sessions are stored in the database and are not cached in-memory as this was tested in a multi-cluster setup.
 Expect a slightly higher performance for single-site setups as a fixed number of user and client sessions will be cached.
-* OpenJDK 21
+* OpenJDK 25
 
 ^*^ For non-ARM CPU architectures on AWS (`c7i`/`c7a` vs. `c7g`) we found that client credential grants and refresh token workloads were able to deliver up to two times the number of operations per CPU core, while password hashing was delivering a constant number of operations per CPU core. Depending on your workload and your cloud pricing, please run your own tests and make your own calculations for mixed workloads to find out which architecture delivers a better pricing for you.
 
